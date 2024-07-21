@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Sources') {
           steps {
-            echo 'building the application...'
+            echo 'landing2 building the application...'
             // git 'https://gitlab.com/chiminyau/ci-test.git'
           }
         }
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Config') {
           steps {
-            echo 'Config...  now....'
+            echo 'landing2 Config...  now....'
             // sh 'npm set registry https://registry.npm.taobao.org'
             // sh 'npm set disturl https://npm.taobao.org/dist'
             // sh 'npm set chromedriver_cdnurl http://cdn.npm.taobao.org/dist/chromedriver'
