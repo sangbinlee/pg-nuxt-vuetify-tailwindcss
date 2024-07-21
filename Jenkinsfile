@@ -26,11 +26,11 @@ pipeline {
             // sh 'npm set electron_mirror http://cdn.npm.taobao.org/dist/electron/'
           }
         }
-        // stage('Dependencies') {
-        //   steps {
-        //     sh 'npm install'
-        //   }
-        // }
+        stage('Dependencies') {
+          steps {
+            sh 'npm install'
+          }
+        }
         // stage('Unit Test') {
         //   steps {
         //     sh 'npm run unit'
