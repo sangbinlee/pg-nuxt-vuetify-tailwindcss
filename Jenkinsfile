@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Information') {
           steps {
+            echo 'landing2 Information...'
             sh 'node -v'
             sh 'npm -v'
           }
