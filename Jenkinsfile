@@ -3,20 +3,20 @@ pipeline {
     stages {
         stage('Clone Sources') {
           steps {
-            echo 'anding building the application...'
+            echo 'landing2 building the application...'
             // git 'https://gitlab.com/chiminyau/ci-test.git'
           }
         }
         stage('Information') {
           steps {
-            echo 'anding Information...'
+            echo 'landing2 Information...'
             sh 'node -v'
             sh 'npm -v'
           }
         }
         stage('Config') {
           steps {
-            echo 'anding Config...  now....'
+            echo 'landing2 Config...  now....'
             // sh 'npm set registry https://registry.npm.taobao.org'
             // sh 'npm set disturl https://npm.taobao.org/dist'
             // sh 'npm set chromedriver_cdnurl http://cdn.npm.taobao.org/dist/chromedriver'
@@ -39,7 +39,7 @@ pipeline {
         // }
         stage('Build') {
           steps {
-            echo 'anding building the application...  now....'
+            echo 'landing2 building the application...  now....'
             sh 'npm run build'
           }
         }
@@ -54,16 +54,16 @@ pipeline {
         // }
         stage('test') {
             steps {
-                echo 'anding testing the application...'
+                echo 'landing2 testing the application...'
             }
         }
         stage('deploy') {
             steps {
                 echo 'nuxt-app-3 run the application... by node 명령  important https://jenkins.sodi9.store/github-webhook/'
-                echo 'anding deploying the application...'
+                echo 'landing2 deploying the application...'
+                // sh ' pm2 restart "llanding2" || pm2 start .output/server/index.mjs -i max --name "llanding2"'
                 echo 'Acting on Configuration File - ecosystem.config.cjs'
-                sh 'NODE_ENV=production pm2 restart start ecosystem.config.cjs || pm2 start ecosystem.config.cjs'
-                // sh ' pm2 restart "landing" || pm2 start .output/server/index.mjs -i max --name "landing"'
+                sh 'NODE_ENV=production pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs'
             }
         }
     }
