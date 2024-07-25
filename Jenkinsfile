@@ -61,8 +61,8 @@ pipeline {
             steps {
                 echo 'nuxt-app-3 run the application... by node 명령  important https://jenkins.sodi9.store/github-webhook/'
                 echo 'anding deploying the application...'
-                echo 'Acting on Configuration File - ecosystem.config.js'
-                sh 'NODE_ENV=production pm2 restart start ecosystem.config.js || pm2 start ecosystem.config.js'
+                echo 'Acting on Configuration File - ecosystem.config.cjs'
+                sh 'NODE_ENV=production pm2 restart start ecosystem.config.cjs || pm2 start ecosystem.config.cjs'
                 // sh ' pm2 restart "landing" || pm2 start .output/server/index.mjs -i max --name "landing"'
             }
         }
